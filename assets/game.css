@@ -38,17 +38,17 @@
 
 }
 
-#hud {
+#tracking {
     display: flex;
     justify-content: space-between;
 }
 
-.hud-prefix {
+.displayScore {
     text-align: center;
     font-size: 1.2rem;
 }
 
-.hud-main-text {
+.scorePoint {
     text-align: center;
 }
 
@@ -68,7 +68,48 @@
 }
 
 @media screen and (max-width: 768px) {
-    .choice-container {
+    .game {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         min-width: 100px;
+        max-width: 300px;
     }
+
+    #hud {
+        width: 300px;
+        padding-top: 10px;
+        
+    }
+
+    .scorePoint {
+        margin: 0;
+        position: fixed;
+        top: 40px;
+        right: 20px;
+    }
+
+    .displayScore {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    #question {
+        width: 800px;
+        padding-bottom: 15px;
+        padding-top: 10px;
+    }
+
+    #progressBar{
+        width: 200px;
+        height: 50px;
+        border: 0.2rem solid lime;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
 }
