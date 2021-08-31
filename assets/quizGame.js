@@ -132,7 +132,6 @@ startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
-    // timerCount = 60;
     getNewQuestion()
     startTimer()
 }
