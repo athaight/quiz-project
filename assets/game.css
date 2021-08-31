@@ -57,6 +57,7 @@
     height: 50px;
     border: 0.2rem solid lime;
     margin-top: 2rem;
+    margin-bottom: 1rem;
     border-radius: 50px;
     overflow: hidden;
 }

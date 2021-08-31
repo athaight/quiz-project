@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz High Scores</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="ready">HIGH SCORES</h1>
+    </header>
+    <div id="home" class="gameButtons">
+        <div class="container">
+            <div id="highScores"></div>
+            <div id="highScoresList"></div>
+            <form class="scoreSaveContainer">
+                <h3 id="saveScore">Enter your name to save your score</h3>
+                <input type="text" name="name" id="username" placeholder="Enter your name here"></input>
+            </form>
+                  
+            <button type="submit" class="btn" id="scoreSaver" onclick="highScoreRecord(event)" disabled>Save your score</button>
+            <a href="/game.html" class="btn">Play Again?</a>
+
+        </div>
+        </div>
+        </div>
+        <script src="assets/highScore.js"></script>
+</body>
+</html>

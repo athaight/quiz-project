@@ -1,4 +1,4 @@
-//debugger;
+debugger;
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
@@ -125,8 +125,8 @@ let questions = [
     },
 ];
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 12
+const pointsScored = 100
+const totalQuestions = 12
 
 startGame = () => {
     questionCounter = 0
@@ -143,39 +143,46 @@ function startTimer(){
         document.querySelector('.timer-count').innerHTML='00:'+sec;
         if (sec < 0) {
             clearInterval(timer);
-            alert("Out of time! Try Agian.")
         }
-        if (sec == 0){
+        if (sec <= 0){
             clearInterval(timer);
+            confirm("Out of time! Try Agian?");
+            return window.location.assign('/index.html');
         }
         
     }, 1000);
 }
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+    if(availableQuestions.length === 0 || questionCounter > totalQuestions) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/end.html')
+        return window.location.assign('/highScores.html')
 
     }
+    
 
     questionCounter++
-    progressText.innerHTML = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    progressText.innerHTML = `Question ${questionCounter} of ${totalQuestions}`
+    progressBarFull.style.width = `${(questionCounter/totalQuestions) * 100}%`
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
+
+
     choices.forEach(choice => {
         const number = choice.dataset['number']
+       
         choice.innerText = currentQuestion['choice' + number]
     })
 
     availableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
+
+    
 }
 
 choices.forEach(choice => {
@@ -188,12 +195,14 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if(classToApply === 'correct'){
-            incrementScore(SCORE_POINTS)
+            incrementScore(pointsScored)
+            sec += 5;
+            document.querySelector('.timer-count').innerHTML='00:'+sec;
 
         }
         if(classToApply === 'incorrect'){
-            sec -= 5;
-             document.querySelector('.timer-count').innerHTML='00:'+sec;
+            sec -= 10;
+            document.querySelector('.timer-count').innerHTML='00:'+sec;
         }
 
 
