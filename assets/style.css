@@ -1,0 +1,102 @@
+:root {
+    background-color: rgb(53, 59, 59); 
+    --fontColor: white;
+    --linkColor: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    color: var(--fontColor);
+
+}
+
+a {
+    color: var(--fontColor);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 5rem;
+    color: var(--fontColor);
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.btn {
+    font-size: 2rem;
+    padding: 2rem 0;
+    width: 15rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: var(--fontColor);
+    background: cadetblue; 
+    border-radius: 1rem;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    transition: transform 150ms;
+    transform: scale(1.1);
+}
+
+.btn[disable]:hover {
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+}
+
+#highScores-btn {
+    background: yellow;
+}
+
+#highScores-btn:hover {
+    background: rgb(255, 0, 179);
+}
