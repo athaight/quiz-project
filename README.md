@@ -1,8 +1,8 @@
-# quiz-project
-<h1>This is our
-(The UofA Coding Bootcamp)
-second homework assignment.</h1>
-<h1>Technologies used: HTML / CSS / JavaScript</h1>
+<h1># quiz-project</h1>
+<h2>
+UofA Coding Bootcamp
+second homework assignment.</h2>
+<h2>Technologies used: HTML / CSS / JavaScript</h2>
 <p>
  
   Random Facts Quiz
