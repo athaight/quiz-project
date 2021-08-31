@@ -8,4 +8,4 @@ second homework assignment.</h1>
   
   I included a timer that starts at 1 minute, subtracts -10 seconds if a wrong choice is selected, as well as adds +5 seconds if a correct answer is chosen, and has a status bar showing progression through the quiz.
   
-  There is a "home" page (index.html) that allow you to play the quiz or view the high scores page (highScores.html). If the timer runs out an confirmation box asks to either play again, or save your high score. If play again is selected it immedately restarts the game, otherwise you're directed to the high scores page, which is the end page as well, and and again, allows you to enter your name to save your score to the local storage. 
+  There is a "home" page (index.html) that allows you to play the quiz or view the high scores page (highScores.html). If the timer runs out a confirmation box asks to either play again, or save your high score. If play again is selected it immedately restarts the game, otherwise you're directed to the high scores page, which is the end page as well, and and again, allows you to enter your name to save your score to the local storage. 
