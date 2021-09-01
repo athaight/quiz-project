@@ -19,8 +19,10 @@
                 <h3 id="saveScore">Enter your name to save your score</h3>
                 <input type="text" name="name" id="username" placeholder="Enter your name here"></input>
             </form>
-                  
-            <button type="submit" class="btn" id="scoreSaver" onclick="highScoreRecord(event)" disabled>Save your score</button>
+                <div id="finalScore"><ul></ul></div>
+                  <div id="mostRecentScore"></div>
+            <button type="submit" class="btn" id="scoreSaver" 
+            onclick="highScoreRecord(event)" disabled>Save your score</button>
             <a href="/game.html" class="btn">Play Again?</a>
 
         </div>

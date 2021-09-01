@@ -1,10 +1,12 @@
-debugger;
+// selects the placeholder questions in the html
 const question = document.querySelector('#question');
+// creates an array from the choices 
 const choices = Array.from(document.querySelectorAll('.choice-text'));
+
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
-var timerElement = document.querySelector(".timer-count");
+const timerElement = document.querySelector(".timer-count");
 
 let currentQuestion ={}
 let acceptingAnswers = true
@@ -136,9 +138,9 @@ startGame = () => {
     startTimer()
 }
 
-var sec = 60;
+let sec = 60;
 function startTimer(){
-    var timer = setInterval(function(){
+     timer = setInterval(function(){
         sec--;
         document.querySelector('.timer-count').innerHTML='00:'+sec;
         if (sec < 0) {
@@ -170,7 +172,7 @@ getNewQuestion = () => {
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
-
+    
 
     choices.forEach(choice => {
         const number = choice.dataset['number']
@@ -186,13 +188,13 @@ getNewQuestion = () => {
 }
 
 choices.forEach(choice => {
-    choice.addEventListener('click', e => {
+    choice.addEventListener('click', event => {
         if(!acceptingAnswers) return
         acceptingAnswers = false
-        const selectedChoice = e.target
+        const selectedChoice = event.target
         const selectedAnswer = selectedChoice.dataset['number']
-
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+
 
         if(classToApply === 'correct'){
             incrementScore(pointsScored)
