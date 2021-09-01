@@ -13,3 +13,6 @@ Timer starts at 60 seconds, subtracts -10 seconds if a wrong choice is selected,
   
 Three pages exist, the start page to start the game/check high scores, the main game page, and the highscores page which has a play again option that leads back to the game 
  
+ Deployment: https://athaight.github.io/quiz-project/
+ 
+ 
