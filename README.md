@@ -1,11 +1,15 @@
-# quiz-project
-<h1>This is our
-(The UofA Coding Bootcamp)
-second homework assignment.</h1>
-<h1>Technologies used: HTML / CSS / JavaScript</h1>
+<h1># quiz-project</h1>
+<h2>
+UofA Coding Bootcamp
+second homework assignment.</h2>
+<h2>Technologies used: HTML / CSS / JavaScript</h2>
 <p>
-  In this assignment we built a quiz from the ground up HTML -> CSS -> JavaScript and used JSON to add username and score to the local storage.
+ 
+  Random Facts Quiz
   
-  I included a timer that starts at 1 minute, subtracts -10 seconds if a wrong choice is selected, as well as adds +5 seconds if a correct answer is chosen, and has a status bar showing progression through the quiz.
+Includes countdown timer, progress bar, & username/score tracker.
   
-  There is a "home" page (index.html) that allow you to play the quiz or view the high scores page (highScores.html). If the timer runs out an confirmation box asks to either play again, or save your high score. If play again is selected it immedately restarts the game, otherwise you're directed to the high scores page, which is the end page as well, and and again, allows you to enter your name to save your score to the local storage. 
+Timer starts at 60 seconds, subtracts -10 seconds if a wrong choice is selected, adds +5 seconds if a correct answer is chosen, status bar shows progression through the quiz, and an alert confirmation indicates when out of time and allows to restart the quiz. 
+  
+Three pages exist, the start page to start the game/check high scores, the main game page, and the highscores page which has a play again option that leads back to the game 
+ 
