@@ -15,4 +15,10 @@ Three pages exist, the start page to start the game/check high scores, the main 
  
  Deployment: https://athaight.github.io/quiz-project/
  
+ <h2>Preview image of project:</h2>
+<p  align="center">
+<img src="" />
+</p>
+<br>
+ 
  
