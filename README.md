@@ -17,7 +17,7 @@ Three pages exist, the start page to start the game/check high scores, the main 
  
  <h2>Preview image of project:</h2>
 <p  align="center">
-<img src="" />
+<img src="https://github.com/athaight/quiz-project/blob/main/assets/Document%20-%20Google%20Chrome%209_10_2021%209_45_04%20PM.png" />
 </p>
 <br>
  
